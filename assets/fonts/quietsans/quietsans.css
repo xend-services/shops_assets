@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'QuietSans';
+    src: url("QuietSansRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'QuietSans';
+    font-weight: bold;
+    src: url("QuietSansBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'QuietSans';
+    font-weight: 500;
+    src: url("QuietSansSemiBold.otf") format("opentype");
+}
