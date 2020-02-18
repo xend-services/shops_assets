@@ -212,4 +212,55 @@ $(".CheckoutForm").on("submit", function(e) {
 
 
 
+    $(".PayWithXendButton").on("click", function() {
+
+        var invoice_id = $(this).data("invoice_id");
+        var order_amount = $(this).data("order_amount");
+        var post_path = $(this).data("generate_xend_invoice_path");
+
+        $(this).LoadingOverlay("show");
+
+        $.post(post_path,
+            {
+                invoice_id: invoice_id,
+                order_amount: order_amount
+            }, function(result){
+
+                if(result['status'] === 'success'){
+
+                    $('#invoiceNumInput').val(result['data']['InvoiceNumber']);// put the invoice number from invoice service to an input
+                    openXendSdk();
+                    iziToast.success({
+                        title: 'OK',
+                        message: result['message'],
+                    });
+                    $('.PayWithXendButton').LoadingOverlay("hide");
+
+                }else{
+                    iziToast.error({
+                        title: 'Error',
+                        message: result['message'],
+                    });
+
+                    iziToast.error({
+                        title: 'Error',
+                        message: "Invoice Service is throwing 400",
+                    });
+
+
+
+                    $('.PayWithXendButton').LoadingOverlay("hide");
+
+                }
+
+            });
+
+
+    });
+
+
+
+
+
+
 });

@@ -4005,7 +4005,7 @@ input[type=submit].btn-block {
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3e%3cpath fill='none' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M9 1L3.5 7L1 4.27273'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3e%3cpath fill='none' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M9 1L3.5 7L1 4.27273'/%3e%3c/svg%3e");    
     background-color: var(--primary);
 }
 
@@ -8080,7 +8080,7 @@ button.bg-dark:hover {
 }
 
 .shadow-lg {
-    box-shadow: 0 .25rem .25rem rgba(17, 17, 17, .02), 0 .75rem 2.25rem rgba(17, 17, 17, .04)!important
+    box-shadow: 0 .25rem .25rem rgba(17, 17, 17, .05), 0 .75rem 2.25rem rgba(17, 17, 17, .06)!important
 }
 
 .shadow-xlg {
@@ -13543,7 +13543,7 @@ a.text-dark:hover {
     border: 1px solid var(--primary)!important;
 }
 
-.btn-white-primary-inverse:hover,
+.btn-white-primary-inverse:hover, 
 .btn-white-primary-inverse:focus{
     background-color: var(--primary);
     border-color: var(--primary);
@@ -17224,9 +17224,9 @@ a.text-decoration-underline:hover {
     position: absolute;
     width: 0;
     height: 0;
-    background-image: url(../img/masks/avatar-status.svg),
-    url(../img/masks/avatar-group.svg),
-    url(../img/masks/avatar-group-hover.svg),
+    background-image: url(../img/masks/avatar-status.svg), 
+    url(../img/masks/avatar-group.svg), 
+    url(../img/masks/avatar-group-hover.svg), 
     url(../img/masks/avatar-group-hover-last.svg)
 }
 
@@ -17766,7 +17766,7 @@ a.text-decoration-underline:hover {
     text-align: center;
 }
 
-.dropdown-header, .dropdown-header:hover,
+.dropdown-header, .dropdown-header:hover, 
 .dropdown-header:focus, .dropdown-header:active{
     color: var(--white)!important;
     background: var(--primary);
@@ -17785,7 +17785,7 @@ a.text-decoration-underline:hover {
     flex-direction: row;
 }
 .navbar-search{
-    width: 480px;
+    width: 480px; 
 }
 .navbar-expand-lg .navbar-collapse.mobile-only {
     display: none!important;
@@ -17806,7 +17806,7 @@ a.text-decoration-underline:hover {
     box-shadow: 0 .25rem .25rem rgba(17, 17, 17, .02), 0 .75rem 2.25rem rgba(17, 17, 17, .2)!important;
 }
 .sticky + .content {
-    padding-top: 130px;
+padding-top: 130px;
 }
 
 div.pagination {
@@ -17911,7 +17911,7 @@ div.pagination span.disabled {
     max-height: 220px;
 }
 .float-icon{
-    position: fixed;
+	position: fixed;
     width: 60px;
     height: 60px;
     bottom: 40px;
@@ -17930,7 +17930,7 @@ div.pagination span.disabled {
 }
 
 .my-float-icon{
-    margin-top: 16px;
+	margin-top: 16px;
     font-size: 30px;
 }
 
@@ -17939,6 +17939,49 @@ div.pagination span.disabled {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 200px;
+}
+
+.item-list{
+    max-width: 100%;
+    flex: 100%;
+}
+
+.item-list>.card{
+    flex-direction: row;
+}
+.item-list .position-relative.card-img-list{
+    display: block;
+    height: auto;
+    display: inline-block;
+    width: 200px;
+    line-height: 200px;
+}
+.item-list .card-collapse-parent{
+    width: calc(100% - 200px);
+}
+.item-list .card-img-btn, .item-list .card-action {
+    position: initial;
+}
+.item-list .col{
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+    grid-column-gap: 10px;
+}
+.item-list .card-details{
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.item-list .list-name{
+    font-size: 1.3rem;
+}
+.list-description{
+    display: none
+}
+.item-list .list-description{
+    font-weight: 400;
+    font-size: 1rem;
+    display: block
 }
 @media (max-width: 1195px){
     .no-margin-x {
@@ -18014,14 +18057,21 @@ div.pagination span.disabled {
         background-repeat: no-repeat;
         background-position: bottom right;
     }
+    .item-list .position-relative.card-img-list {
+        display: block;
+        height: auto;
+        display: inline-block;
+        width: 175px;
+        line-height: 175px;
+    }
 }
 
 @media (min-width:480px) {
-
+    
     .hero-image{
         min-height: 400px;
     }
-
+    
 }
 @media (max-width:768px) {
     .error-txt {
@@ -18111,6 +18161,12 @@ div.pagination span.disabled {
         background-repeat: no-repeat;
         background-position: 1% 136%;
     }
+    .item-list .position-relative.card-img-list {
+        display: block;
+        height: auto;
+        display: inline-block;
+        width: 140px;
+        line-height: 140px;
+    }
 }
-
 
