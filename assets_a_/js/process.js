@@ -228,11 +228,11 @@ $(".CheckoutForm").on("submit", function(e) {
 
                 if(result['status'] === 'success'){
 
-                    $('#invoiceNumInput').val(result['data']['InvoiceNumber']);// put the invoice number from invoice service to an input
+                    $('#invoiceNumInput').val(result['data']['invoiceCode']);// put the invoice number from invoice service to an input
                     openXendSdk();
                     iziToast.success({
                         title: 'OK',
-                        message: result['message'],
+                        message: "We are waiting for payment completion",
                     });
                     $('.PayWithXendButton').LoadingOverlay("hide");
 
@@ -257,10 +257,5 @@ $(".CheckoutForm").on("submit", function(e) {
 
 
     });
-
-
-
-
-
 
 });
