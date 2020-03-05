@@ -115,7 +115,7 @@ $(".RemoveProductButton").on("click", function() {
         }, function(result){
 
             if(result['status'] === 'success'){
-                $('.product_row_' + product_id).hide(5000);
+                $('.product_row_' + product_id).hide();
 
                 iziToast.success({
                     title: 'OK',

@@ -14927,7 +14927,7 @@ a.card-img-overlay:hover {
     }
 
     .navbar-light .navbar-brand img{
-        max-width: 70px;
+        max-width: 80px;
     }
 }
 
@@ -15934,6 +15934,19 @@ strong {
 }
 
 .list-styled-link.active {
+    color: var(--primary);
+}
+
+.list-styled-link:not([href]) {
+    display: block;
+    color: #525252
+}
+.list-styled-link:not([href]):focus,
+.list-styled-link:not([href]):hover {
+    color: var(--primary);
+    cursor: pointer;
+}
+.list-styled-link:not([href]).active {
     color: var(--primary);
 }
 
@@ -17953,8 +17966,8 @@ div.pagination span.disabled {
     display: block;
     height: auto;
     display: inline-block;
-    width: 200px;
-    line-height: 200px;
+    width: 175px;
+    line-height: 175px;
 }
 .item-list .card-collapse-parent{
     width: calc(100% - 200px);
@@ -17973,7 +17986,10 @@ div.pagination span.disabled {
     transform: translate(-50%,-50%);
 }
 .item-list .list-name{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    margin-right: 10px;
 }
 .list-description{
     display: none
@@ -17982,6 +17998,12 @@ div.pagination span.disabled {
     font-weight: 400;
     font-size: 1rem;
     display: block
+}
+.item-list .text-limit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: unset;
 }
 @media (max-width: 1195px){
     .no-margin-x {
@@ -18122,6 +18144,7 @@ div.pagination span.disabled {
         background: #fff;
         padding: 1px 1px;
         line-height: 25px;
+        display: none;
     }
     .cart-input.input-box{
         padding: 3px 4px;
