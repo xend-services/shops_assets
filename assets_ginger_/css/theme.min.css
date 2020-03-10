@@ -172,7 +172,7 @@ sup {
 a {
     color: #ff6f61;
     text-decoration: none;
-    background-color: transparent
+    background-color: transparent !important;
 }
 
 a:hover {
@@ -8176,6 +8176,9 @@ button.bg-dark:hover {
 .mw-160{
     max-width: 160px;
 }
+.mw-190{
+    max-width: 190px;
+}
 .mh-100 {
     max-height: 100%!important
 }
@@ -15841,7 +15844,7 @@ a {
     }
     .h3,
     h3 {
-        font-size: 1.75rem
+        font-size: 1.55rem
     }
     .h4,
     h4 {
@@ -17762,6 +17765,7 @@ a.text-decoration-underline:hover {
     position: absolute;
     right: 24%;
     top: -55px;
+    z-index: 15;
 }
 
 .input-btn{
@@ -17782,7 +17786,7 @@ a.text-decoration-underline:hover {
 .dropdown-header, .dropdown-header:hover, 
 .dropdown-header:focus, .dropdown-header:active{
     color: var(--white)!important;
-    background: var(--primary);
+    background: var(--primary)!important;
 }
 
 .desktop-only{
@@ -17929,7 +17933,7 @@ div.pagination span.disabled {
     height: 60px;
     bottom: 40px;
     right: 15px;
-    background-color: #11b516;
+    background-color: #11b516 !important;
     color: #FFF;
     z-index: 1000;
     border-radius: 50px;
@@ -18004,6 +18008,37 @@ div.pagination span.disabled {
     text-overflow: ellipsis;
     max-width: 100%;
     white-space: unset;
+}
+.cart-mobile{
+    display: none; 
+ }
+ .cart-desktop{
+    display: block;
+}
+.soldout-blk{
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    background: #00000052;
+    width: 100%;
+    height: 100%;
+}
+.soldout-banner{
+    position: absolute;
+    top: 14px;
+    z-index: 10;
+    background: #f00000;
+    transform: rotate(-35deg);
+    left: -32px;
+    min-width: 134px;
+}
+.soldout-text{
+    color: white;
+    font-size: 0.9rem;
+    padding: 3px 18px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 @media (max-width: 1195px){
     .no-margin-x {
@@ -18101,6 +18136,12 @@ div.pagination span.disabled {
         left: 0;
         transform: translateX(55%);
     }
+    .cart-mobile{
+        display: block; 
+    }
+    .cart-desktop{
+        display: none
+    }
 }
 @media (max-width:480px) {
     .navbar {
@@ -18144,10 +18185,15 @@ div.pagination span.disabled {
         background: #fff;
         padding: 1px 1px;
         line-height: 25px;
-        display: none;
+        
     }
     .cart-input.input-box{
-        padding: 3px 4px;
+        padding: 3px 0px;
+    }
+    .cart-item-img {
+        max-width: 75px;
+        height: auto;
+        width: auto;
     }
     .table.cart-table td{
         padding: 0.5rem 0.3rem;

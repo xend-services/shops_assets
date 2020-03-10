@@ -216,6 +216,7 @@ $(".CheckoutForm").on("submit", function(e) {
 
         var invoice_id = $(this).data("invoice_id");
         var order_amount = $(this).data("order_amount");
+        var merchant_currency = $(this).data("merchant_currency");
         var post_path = $(this).data("generate_xend_invoice_path");
 
         $(this).LoadingOverlay("show");
@@ -223,7 +224,8 @@ $(".CheckoutForm").on("submit", function(e) {
         $.post(post_path,
             {
                 invoice_id: invoice_id,
-                order_amount: order_amount
+                order_amount: order_amount,
+                merchant_currency : merchant_currency
             }, function(result){
 
                 if(result['status'] === 'success'){
