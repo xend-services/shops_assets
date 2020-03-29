@@ -236,7 +236,7 @@ th {
 
 label {
     display: inline-block;
-    margin-bottom: .5rem
+    margin-bottom: 0rem
 }
 
 button {
@@ -3360,7 +3360,7 @@ fieldset:disabled a.btn {
     padding: .8125rem .5rem;
     font-size: .9375rem;
     line-height: 1.40625rem;
-    border-radius: 0
+    border-radius: 3px;
 }
 
 .btn-block {
@@ -13191,12 +13191,12 @@ a.text-warning:hover {
 }
 
 .text-danger {
-    color: #F16622!important
+    color: #f02929!important
 }
 
 a.text-danger:focus,
 a.text-danger:hover {
-    color: #ff2915!important
+    color: #e12121!important
 }
 
 .text-light {
@@ -18272,5 +18272,19 @@ div.pagination span.disabled {
         width: auto;
         margin-right: 0.15rem;
     }
+    
+    .itemRow:nth-of-type(odd) {
+        padding-right: 0.35rem
+    }
+    .itemRow:nth-of-type(even) {
+        padding-left: 0.35rem
+    }
+    .item-list.itemRow:nth-of-type(odd) {
+        padding-right: 1rem
+    }
+    .item-list.itemRow:nth-of-type(even) {
+        padding-left: 1rem
+    }
+        
 }
 
