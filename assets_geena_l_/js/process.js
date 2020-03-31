@@ -4,6 +4,7 @@ $(document).ready(function(){
 $(".addProductToCartButton").on("click", function() {
 
     var product_id = $(this).data("product_id");
+    var inventory_product_id = $(this).data("inventory_product_id");
     var product_name = $(this).data("product_name");
     var image_url = $(this).data("image_url");
     var unit_price = $(this).data("unit_price");
@@ -18,6 +19,7 @@ $(".addProductToCartButton").on("click", function() {
     $.post(post_path,
         {
             product_id: product_id,
+            inventory_product_id: inventory_product_id,
             quantity: quantity,
             product_name: product_name,
             image_url: image_url,
@@ -55,6 +57,7 @@ $(".addProductToCartButton").on("click", function() {
 $(".addSingleProductToCartButton").on("click", function() {
 
     var product_id = $(this).data("product_id");
+    var inventory_product_id = $(this).data("inventory_product_id");
     var product_name = $(this).data("product_name");
     var image_url = $(this).data("image_url");
     var unit_price = $(this).data("unit_price");
@@ -68,6 +71,7 @@ $(".addSingleProductToCartButton").on("click", function() {
     $.post(post_path,
         {
             product_id: product_id,
+            inventory_product_id: inventory_product_id,
             quantity: quantity,
             product_name: product_name,
             image_url: image_url,
