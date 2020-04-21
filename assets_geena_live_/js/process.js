@@ -67,7 +67,7 @@ $(".addSingleProductToCartButton").on("click", function() {
     var unit = $(this).data("unit");
     var post_path = $(this).data("cart");
     $(this).LoadingOverlay("show");
-
+    
     $.post(post_path,
         {
             product_id: product_id,
