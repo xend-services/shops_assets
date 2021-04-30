@@ -1,0 +1,17 @@
+function itemToCart() {
+    console.log("clicked button")
+    let totalCartValue = 0;
+    console.log("addToCart",addToCart)
+    for (let i = 0; i < addToCart.length; i++) {
+        
+        let element = cartValue[i];
+        console.log("element before",element, "addToCart.length",addToCart.length)
+        totalCartValue = parseInt(element.getAttribute('data-cart-items')) + 1;
+        console.log("new totalCartValue",totalCartValue)
+        console.log("element after",element)
+        //set the new value to the added value
+        // element.setAttribute('data-cart-items', totalCartValue + '');
+        element.setAttribute('data-cart-items', totalCartValue);
+        console.log("i came here after set attribute")
+    }
+}
